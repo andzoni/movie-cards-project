@@ -3,6 +3,7 @@ import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { Loading, MovieForm } from '../components';
 import * as movieAPI from '../services/movieAPI';
+import { Container, Navbar, Card } from 'react-bootstrap';
 
 class EditMovie extends Component {
   constructor(props) {
@@ -46,8 +47,37 @@ class EditMovie extends Component {
     }
 
     return (
-      <div data-testid="edit-movie">
-        <MovieForm movie={ movie } onSubmit={ this.handleSubmit } />
+      <div data-testid="new-movie">
+        <Navbar bg="dark" variant="dark">
+          <Container className="d-flex justify-content-center">
+            <Navbar.Brand 
+              className="p-2 col-example text-left" 
+              href="/">
+              Project Movie List
+            </Navbar.Brand>
+          </Container>
+        </Navbar>
+        <br/>
+        <br/>
+        <div className="d-flex justify-content-center">
+          <Card 
+            className="mb-2 card bg-secondary text-white"
+            style={{ width: '28rem' }}>
+            <Card.Body className="align-self-center p-2 bd-highlight col-example">
+              <h1>Modifique</h1>
+            </Card.Body>
+          </Card>
+        </div>
+        <br/>
+        <div className='d-flex justify-content-center' data-testid="movie-details">
+          <Card 
+            className="mb-2 card bg-secondary text-white"
+            style={{ width: '28rem' }}>
+            <Card.Body>
+              <MovieForm movie={ movie } onSubmit={ this.handleSubmit } />  
+            </Card.Body>
+          </Card>
+        </div>
       </div>
     );
   }

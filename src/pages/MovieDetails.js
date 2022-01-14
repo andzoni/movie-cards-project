@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import * as movieAPI from '../services/movieAPI';
 import { Loading } from '../components';
+import { Card, Button, ListGroup, ListGroupItem } from 'react-bootstrap';
 
 class MovieDetails extends Component {
   constructor() {
@@ -45,28 +46,32 @@ class MovieDetails extends Component {
       rating,
       subtitle } = movie;
     return (
-      <div data-testid="movie-details">
-        <img alt="Movie Cover" src={ `../${imagePath}` } />
-        <h3>
-          { `Title: ${title}` }
-        </h3>
-        <p>
-          { `Subtitle: ${subtitle}` }
-        </p>
-        <p>
-          { `Storyline: ${storyline}` }
-        </p>
-        <p>
-          { `Genre: ${genre}` }
-        </p>
-        <p>
-          { `Rating: ${rating}` }
-        </p>
-        <Link to={ `/movies/${id}/edit` }>EDITAR</Link>
-        <Link to="/">VOLTAR</Link>
-        <button type="button" onClick={ this.handleClick } className="delete-movie">
-          <Link to="/">DELETAR</Link>
-        </button>
+      <div className='d-flex justify-content-center' data-testid="movie-details">
+        <Card style={{ width: '28rem' }}>
+          <Card.Img variant="top" alt="Movie Cover" src={ `../${imagePath}`} />
+          <Card.Body>
+            <Card.Title className='d-flex justify-content-center'>{ `Title: ${title}` }</Card.Title>
+            <Card.Text className='d-flex justify-content-center'>{ `Subtitle: ${subtitle}` }</Card.Text>
+            <Card.Text className='d-flex justify-content-center'>
+              { `Storyline: ${storyline}` }
+            </Card.Text>
+          </Card.Body>
+          <ListGroup className="list-group-flush" >
+            <ListGroupItem className='d-flex justify-content-center'>{ `Genre: ${genre}` }</ListGroupItem>
+            <ListGroupItem className='d-flex justify-content-center'>{ `Rating: ${rating}` }</ListGroupItem>
+          </ListGroup>
+          <Card.Body className="d-flex bd-highlight example-parent" >
+            <Button variant="secondary" type="button" className="p-2 flex-fill bd-highlight col-example">
+              <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to={ `/movies/${id}/edit` }>EDITAR</Link>
+            </Button>
+            <Button variant="outline-secondary" type="button" className="p-2 flex-fill bd-highlight col-example">
+              <Link style={{ color: 'inherit', textDecoration: 'inherit'}}to="/">VOLTAR</Link>
+            </Button>
+            <Button variant="danger" type="button" onClick={ this.handleClick } className="p-2 flex-fill bd-highlight col-example">
+              <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to="/">DELETAR</Link>
+            </Button>
+          </Card.Body>
+        </Card>
       </div>
     );
   }
