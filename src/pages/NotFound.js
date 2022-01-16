@@ -6,7 +6,7 @@ class NotFound extends Component {
     return (
       <div className='d-flex justify-content-center'> 
         <Alert className='d-flex justify-content-center' variant={'danger'}>
-          Página não encontrada
+          Page not found...
         </Alert>
       </div>
     )

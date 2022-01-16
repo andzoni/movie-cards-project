@@ -110,7 +110,7 @@ class MovieForm extends React.Component {
     const { rating } = this.state;
     return (
       <Form.Group className="mb-3">
-        <Form.Label htmlFor="movie_rating">Avaliação</Form.Label>
+        <Form.Label htmlFor="movie_rating">Rating</Form.Label>
         <Form.Control
           placeholder="Dê a avaliação do filme"
           id="movie_rating"

@@ -62,13 +62,13 @@ class MovieDetails extends Component {
           </ListGroup>
           <Card.Body className="d-flex bd-highlight example-parent" >
             <Button variant="secondary" type="button" className="p-2 flex-fill bd-highlight col-example">
-              <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to={ `/movies/${id}/edit` }>EDITAR</Link>
+              <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to={ `/movies/${id}/edit` }>EDIT</Link>
             </Button>
             <Button variant="outline-secondary" type="button" className="p-2 flex-fill bd-highlight col-example">
-              <Link style={{ color: 'inherit', textDecoration: 'inherit'}}to="/">VOLTAR</Link>
+              <Link style={{ color: 'inherit', textDecoration: 'inherit'}}to="/">BACK</Link>
             </Button>
             <Button variant="danger" type="button" onClick={ this.handleClick } className="p-2 flex-fill bd-highlight col-example">
-              <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to="/">DELETAR</Link>
+              <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to="/">DELETE</Link>
             </Button>
           </Card.Body>
         </Card>

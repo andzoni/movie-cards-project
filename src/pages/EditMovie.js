@@ -64,7 +64,7 @@ class EditMovie extends Component {
             className="mb-2 card bg-secondary text-white"
             style={{ width: '28rem' }}>
             <Card.Body className="align-self-center p-2 bd-highlight col-example">
-              <h1>Modifique</h1>
+              <h1>Modify</h1>
             </Card.Body>
           </Card>
         </div>

@@ -19,7 +19,7 @@ class MovieCard extends React.Component {
           </Card.Body>
           <Card.Body className="d-flex bd-highlight example-parent" >
             <Button variant="secondary" type="button" className="p-2 flex-fill bd-highlight col-example">
-              <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to={ `movies/${id}` }>VER DETALHES</Link>
+              <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to={ `movies/${id}` }>DETAILS</Link>
             </Button>
           </Card.Body>
           <Card.Body>

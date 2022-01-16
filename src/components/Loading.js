@@ -6,7 +6,7 @@ class Loading extends Component {
     return (
       <div className='d-flex justify-content-center'> 
         <Alert className='d-flex justify-content-center' variant={'dark'}>
-          Carregando...
+          Loading...
         </Alert>
       </div> 
     );
