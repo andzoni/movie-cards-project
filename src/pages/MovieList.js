@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import MovieCard from '../components/MovieCard';
 import { Loading } from '../components';
 import * as movieAPI from '../services/movieAPI';
-import { Nav, Navbar, Container, Carousel, CarouselItem} from 'react-bootstrap';
+import { Navbar, Container, Carousel, CarouselItem} from 'react-bootstrap';
 
 class MovieList extends Component {
   constructor() {
