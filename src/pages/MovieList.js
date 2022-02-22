@@ -36,9 +36,11 @@ class MovieList extends Component {
         <Navbar bg="dark" variant="dark">
           <Container className="d-flex justify-content-center">
             <Navbar.Brand className="p-2 col-example text-left" href="#home">Project Movie List</Navbar.Brand>
-            <Nav className="p-2 col-example text-left">
+          </Container>
+          <Container className="d-flex justify-content-center">
+            <Navbar.Brand className="p-2 col-example text-left" href="#home">
               <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to="/movies/new">Add Card</Link>
-            </Nav>
+            </Navbar.Brand>
           </Container>
         </Navbar>
         <br/>
